@@ -18,7 +18,7 @@ return new class extends Migration
             $table->text('noi_dung');
             $table->unsignedInteger('ma_de_tai');
             $table->string('nguoi_tao', 20);
-            $table->date('ngay_tao')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('ngay_tao')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->enum('trang_thai', ['Chờ duyệt', 'Được duyệt', 'Bị từ chối']);
             $table->string('duong_dan_tep', 255)->nullable();
             $table->timestamps();
