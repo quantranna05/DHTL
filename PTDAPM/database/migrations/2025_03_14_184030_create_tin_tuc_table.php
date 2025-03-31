@@ -16,7 +16,7 @@ return new class extends Migration
             $table->increments('ma_tin_tuc');
             $table->string('tieu_de', 255);
             $table->text('noi_dung');
-            $table->date('ngay_dang')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('ngay_dang')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->string('nguoi_dang', 100);
             $table->string('duong_dan_tep', 255)->nullable();
             $table->timestamps();
